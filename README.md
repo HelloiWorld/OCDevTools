@@ -2,7 +2,8 @@
 Useful tools for iOS development
 
 ## Categories
-Here are just **global** configurations and useful methods. You will have a variety of catrgories according to the needs of the business.
+Here are just **global** configurations and useful methods.  
+You should have a variety of catrgories according to the needs of the business， although too many categories will increase App launch time.
 
 #### NavigationBar
 - UIViewController+Swizzling  快速配置全局导航栏，统一风格
