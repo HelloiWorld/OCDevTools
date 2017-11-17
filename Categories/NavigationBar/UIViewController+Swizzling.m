@@ -8,6 +8,7 @@
 
 #import "UIViewController+Swizzling.h"
 #import "SwizzlingDefine.h"
+#import "UIImage+Color.h"
 
 #pragma mark - UIColor宏定义
 #define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \
@@ -47,8 +48,8 @@ alpha:alphaValue]
         [dic setObject:UIColorFromRGB(0x505050) forKey:NSForegroundColorAttributeName];
         self.navigationController.navigationBar.titleTextAttributes = [dic copy];
         
-        [self.navigationController.navigationBar setBackgroundImage:[self imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-        [self.navigationController.navigationBar setShadowImage:[self imageWithColor:UIColorFromRGB(0xEEEEEE)]];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:UIColorFromRGB(0xEEEEEE)]];
         // 设置导航栏背景颜色
         //        self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0xffffff);
         //        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
@@ -56,20 +57,6 @@ alpha:alphaValue]
         //        self.navigationController.navigationBar.translucent = NO;
     }
     [self swizzling_viewDidLoad];
-}
-
-- (UIImage *)imageWithColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
 }
 
 @end
