@@ -21,6 +21,9 @@ You should have a variety of catrgories according to the needs of the business�
 #### UILabel
 - UILabel+LineSpace 快速设置文本标签行间距
 
+#### UIScrollView
+- UIScrollView+Direction kvo获得UIScrollView或其子类的滚动方向
+
 #### UITextField
 - UITextField+Editing 解决编辑状态文字下移的问题，也可自定义全局光标颜色
 
