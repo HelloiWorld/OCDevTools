@@ -27,3 +27,15 @@ You should have a variety of catrgories according to the needs of the business�
 #### UIView
 - UIView+Responder 获取view对应的父vc
 - UIViewAdditions UIView的extensions，并提供了在父视图superview或子视图subviews中寻找指定继承class类的view的方法
+
+
+
+## Macros
+Here defines some **common** macros.  
+
+#### UIDeviceMacros
+这里定义了设备相关的宏，包括系统版本、设备尺寸（机型）判断
+
+#### UtilMacros
+这里提供了一些小巧精致耐用的宏，以节省重复代码书写
+
