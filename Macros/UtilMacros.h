@@ -9,8 +9,21 @@
 #ifndef UtilMacros_h
 #define UtilMacros_h
 
+#pragma mark - UIColor宏定义
+
+#define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0x0000FF))/255.0 \
+alpha:alphaValue]
+
+#define UIColorFromRGB(rgbValue) UIColorFromRGBA(rgbValue, 1.0)
+#define UIColorWithRGB(__r,__g,__b) [UIColor colorWithRed:__r/255.0 green:__g/255.0 blue:__b/255.0 alpha:1.0]
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 #define MustOverride() @throw [NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"%s must be overridden in a subclass/category", __PRETTY_FUNCTION__] userInfo:nil]
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 #if __has_feature(objc_arc) // ARC
 
 #define DEF_SINGLETON(name) \
