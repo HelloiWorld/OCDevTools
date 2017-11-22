@@ -25,7 +25,7 @@
 }
 
 /**
- 重写push跳转方法：
+ 重写pushViewController:animated:跳转方法
  1. 自动隐藏tabBar
  2. 解决iPhone X跳转时tabBar上移的问题
  

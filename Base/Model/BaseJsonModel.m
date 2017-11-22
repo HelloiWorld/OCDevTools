@@ -32,7 +32,7 @@
 }
 
 - (NSDictionary *)jsonDictionary{
-    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionaryWithCapacity: 11];
+    NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
     Class selfClass = [self class];
     NSDictionary *keyMap = [selfClass localServerKeyMap];
     [keyMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
