@@ -1,7 +1,17 @@
-# ZKTools
-Useful tools for iOS development
+# Base
+Here are some **basic** classes can be used by any project.  
 
-## Categories
+### BaseJsonModel
+小巧，轻量级的Json模型，用于 本地Model<-->服务端Json 快速互转
+
+### BaseNavigationController
+UINavigationController的基类，重写了`pushViewController:animated`代理方法
+1. 在跳转时自动隐藏tabBar
+2. 解决iPhone X跳转时tabBar上移的问题 
+
+
+
+# Categories
 Here are just **global** configurations and useful methods.  
 You should have a variety of catrgories according to the needs of the business， although too many categories will increase App launch time.
 
@@ -24,7 +34,7 @@ You should have a variety of catrgories according to the needs of the business�
 #### UIScrollView
 - UIScrollView+Direction kvo获得UIScrollView或其子类的滚动方向
 
-#### UITextField
+### UITextField
 - UITextField+Editing 解决编辑状态文字下移的问题，也可自定义全局光标颜色
 
 #### UIView
@@ -33,12 +43,12 @@ You should have a variety of catrgories according to the needs of the business�
 
 
 
-## Macros
+# Macros
 Here defines some **common** macros.  
 
-#### UIDeviceMacros
+### UIDeviceMacros
 这里定义了设备相关的宏，包括系统版本、设备尺寸（机型）判断
 
-#### UtilMacros
+### UtilMacros
 这里提供了一些小巧精致耐用的宏，以节省重复代码书写
 
