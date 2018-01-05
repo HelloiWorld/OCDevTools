@@ -19,8 +19,7 @@ You should have a variety of catrgories according to the needs of the business�
 - UIViewController+Swizzling  快速配置全局导航栏，统一风格
 - UIViewController+BackButtonHandler  用于拦截系统返回按钮的点击事件，实现`-(BOOL)navigationShouldPopOnBackButton`即可
 - UILayoutFittingView 解决iOS11自定义导航栏titleView显示异常的问题，继承即可
-- UINavigationBar+Swizzling 解决标题过长时，设置navigationItem.title导致标题偏移的问题
-- UINavigationItem+Swizzling 设置导航栏titleView标签文字为从中间截取
+- UINavigationBar+Swizzling 解决标题过长时，设置navigationItem.title导致标题偏移的问题，关于导航栏渐变效果，建议移步[WRNavigationBar](https://github.com/wangrui460/WRNavigationBar)
 
 #### NSData
 - NSDate+Base64 基于Base64编解码
