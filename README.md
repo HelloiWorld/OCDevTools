@@ -22,6 +22,9 @@ You should have a variety of catrgories according to the needs of the business�
 - UINavigationBar+Swizzling 解决标题过长时，设置navigationItem.title导致标题偏移的问题
 - UINavigationItem+Swizzling 设置导航栏titleView标签文字为从中间截取
 
+#### NSData
+- NSDate+Base64 基于Base64编解码
+
 #### NSTimer
 - NSTimer+WeakTimer 解决timer引起的循环引用(retain cycle)问题
 
