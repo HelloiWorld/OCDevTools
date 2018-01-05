@@ -25,6 +25,12 @@ You should have a variety of catrgories according to the needs of the business�
 #### NSTimer
 - NSTimer+WeakTimer 解决timer引起的循环引用(retain cycle)问题
 
+#### UIButton
+- UIButton+EdgeInsets 提供了快速交换UIButton中图片和文字位置的方法
+
+#### UIColor
+- UIColor-Adaptive 使用hex设置颜色
+
 #### UIImage
 - UIImage+Color 快速生成纯色图片
 
