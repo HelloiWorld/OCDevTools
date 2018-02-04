@@ -1,13 +1,13 @@
 # git开发流程
 
 1. fork 请把项目fork到自己的仓库
-2. git clone git@github.com:HelloiWorld/ZKTools.git 把项目克隆到本地（克隆）
+2. git clone git@github.com:HelloiWorld/OCDevTools.git 把项目克隆到本地（克隆）
 3. git remote rename origin upstream 把origin仓库名改为upstream
 4. git remote add origin [自己的仓库地址]
 
 规范的开发形式应该为pull request形式
 1. 本地git checkout 一个新的分支，修改完commit以后，git push (默认就是push到origin仓库的对应分支，若没有则新建一个分支)
-2. 此时打开 https://github.com/HelloiWorld/ZKTools 会自动有一个生成pr的按钮，然后生成一个pr,pr会跑ci，然后通过了ci以后可以merge.
+2. 此时打开 https://github.com/HelloiWorld/OCDevTools 会自动有一个生成pr的按钮，然后生成一个pr,pr会跑ci，然后通过了ci以后可以merge.
 3. 回到本地，git pull upstream master保持本地master为最新状态。
 
 tips:
