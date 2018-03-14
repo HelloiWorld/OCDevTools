@@ -1,4 +1,3 @@
-# Base
 Here are some **basic** classes can be used by any project.  
 
 ### BaseJsonModel
@@ -6,6 +5,7 @@ Here are some **basic** classes can be used by any project.
 
 ### BaseNavigationController
 UINavigationController的基类，重写了`pushViewController:animated`代理方法
+
 1. 在跳转时自动隐藏tabBar
 2. 解决iPhone X跳转时tabBar上移的问题 
 
@@ -52,6 +52,16 @@ You should have a variety of catrgories according to the needs of the business�
 - UIView+Responder 获取view对应的父vc
 - UIViewAdditions UIView的extensions，并提供了在父视图superview或子视图subviews中寻找指定继承class类的view的方法
 
+
+
+# CustomControls
+Here are some **custom controls** can be inherited to reduce the codes.
+
+### LimitTextField
+封装了`UITextField`的`UIControlEventEditingChanged`事件，用于限制输入字符长度和特殊字符的过滤，直接继承即可
+
+### LimitTextView
+继承了`UITextView`，重写了代理方法，使用时需要将`delegate`指向其子类，可以方便的显示默认提示文字及字符计数
 
 
 # Macros
