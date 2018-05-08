@@ -10,12 +10,12 @@
 
 @interface NSTimer (WeakTimer)
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval
-                                    repeats:(BOOL)repeats
-                               handlerBlock:(void(^)())handler;
++ (NSTimer *)weak_scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval
+                                         repeats:(BOOL)repeats
+                                    handlerBlock:(void(^)(void))handler;
 
-+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)timeInterval
-                           repeats:(BOOL)repeats
-                      handlerBlock:(void (^)(NSTimer *timer))handler;
++ (NSTimer *)weak_timerWithTimeInterval:(NSTimeInterval)timeInterval
+                                repeats:(BOOL)repeats
+                           handlerBlock:(void (^)(NSTimer *timer))handler;
 
 @end

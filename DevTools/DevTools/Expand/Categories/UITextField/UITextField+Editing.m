@@ -17,11 +17,13 @@
         swizzling_exchangeMethod([UITextField class] ,@selector(textRectForBounds:), @selector(swizzling_textRectForBounds:));
         swizzling_exchangeMethod([UITextField class] ,@selector(editingRectForBounds:), @selector(swizzling_editingRectForBounds:));
 //        swizzling_exchangeMethod([UITextField class] ,@selector(layoutSubviews), @selector(swizzling_layoutSubviews));
-        // 光标颜色
-//        [[UITextField appearance] setTintColor:UIColorFromRGB(0x20c05c)];
     });
 }
 
+//+ (void)initialize {
+    //修改默认光标颜色，子类又会执行
+//    [[UITextField appearance] setTintColor:UIColorFromRGB(0x20c05c)];
+//}
 
 - (CGRect)swizzling_textRectForBounds:(CGRect)bounds
 {

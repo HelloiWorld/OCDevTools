@@ -10,9 +10,9 @@
 
 @implementation NSTimer (WeakTimer)
 
-+ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval
-                                    repeats:(BOOL)repeats
-                               handlerBlock:(void(^)())handler {
++ (NSTimer *)weak_scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval
+                                         repeats:(BOOL)repeats
+                                    handlerBlock:(void(^)(void))handler {
     return [self scheduledTimerWithTimeInterval:timeInterval
                                          target:self
                                        selector:@selector(handlerBlockInvoke:)
@@ -20,9 +20,9 @@
                                         repeats:repeats];
 }
 
-+ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)timeInterval
-                           repeats:(BOOL)repeats
-                      handlerBlock:(void (^)(NSTimer *timer))handler {
++ (NSTimer *)weak_timerWithTimeInterval:(NSTimeInterval)timeInterval
+                                repeats:(BOOL)repeats
+                           handlerBlock:(void (^)(NSTimer *timer))handler {
     return [NSTimer timerWithTimeInterval:timeInterval
                                    target:self
                                  selector:@selector(handlerBlockInvoke:)
@@ -31,7 +31,7 @@
 }
 
 + (void)handlerBlockInvoke:(NSTimer *)timer {
-    void (^block)() = timer.userInfo;
+    void (^block)(void) = timer.userInfo;
     if (block) {
         block();
     }
