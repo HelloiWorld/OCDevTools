@@ -53,6 +53,7 @@
     label.numberOfLines = 0;
     [label setText:text lineSpacing:lineSpacing];
     [label sizeToFit];
+//    label.preferredMaxLayoutWidth = width;
     return label.bounds.size.height;
 }
 

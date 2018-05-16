@@ -21,7 +21,7 @@
 }
 
 //+ (void)initialize {
-    //修改默认光标颜色，子类又会执行
+    //修改默认光标颜色，子类也会执行
 //    [[UITextField appearance] setTintColor:UIColorFromRGB(0x20c05c)];
 //}
 

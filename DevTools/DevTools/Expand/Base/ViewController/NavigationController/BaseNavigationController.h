@@ -10,6 +10,4 @@
 
 @interface BaseNavigationController : UINavigationController
 
-@property (nonatomic, assign) BOOL shouldRotate;
-
 @end

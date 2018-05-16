@@ -16,16 +16,17 @@
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-// 获取系统版本号
+// 获取设备系统版本号
 #define CurrentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
-// 判断版本号
+// 判断app版本号
 #define CurrentVersionString [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
 // iOS系统版本判断：
-#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
-#define IOS_VERSION_8_ABOVE (([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)? (YES):(NO))
-#define IOS9_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending )
-#define IOS10_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"10.0"] != NSOrderedAscending )
+#define IOS7_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS8_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
+#define IOS9_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending )
+#define IOS10_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] compare:@"10.0"] != NSOrderedAscending )
+#define IOS11_OR_LATER    ( [[[UIDevice currentDevice] systemVersion] compare:@"11.0"] != NSOrderedAscending )
 
 // 屏幕的宽、高
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
@@ -34,6 +35,7 @@
 #define kScreenHeightScale [UIScreen mainScreen].bounds.size.height/568.0
 
 //iPhone 固定高度
+#define TOP_BAR_HEIGHT (kDevice_Is_iPhoneX ? 88 : 64)
 #define STATUS_BAR_HEIGHT (kDevice_Is_iPhoneX ? 44 : 20)
 #define STATUS_BAR_OFFSET (kDevice_Is_iPhoneX ? 24 : 0)
 #define NAV_BAR_HEIGHT 44

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RA9-vm-uID" customClass="EmptyStatusView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="无网络空态" translatesAutoresizingMaskIntoConstraints="NO" id="D6v-jb-HFk">
+                    <rect key="frame" x="76" y="108" width="223" height="176"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哎呀，网络出问题了！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auA-mj-JiH">
+                    <rect key="frame" x="37.5" y="306" width="300" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwL-3w-odY">
+                    <rect key="frame" x="112" y="373" width="150" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="bHv-5B-J5h"/>
+                        <constraint firstAttribute="height" constant="35" id="w1a-PU-HOJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="重新加载">
+                        <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="reloadBtnClick:" destination="RA9-vm-uID" eventType="touchUpInside" id="yD1-4X-kqF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="D6v-jb-HFk" firstAttribute="centerY" secondItem="RA9-vm-uID" secondAttribute="centerY" multiplier="196:333.5" id="49Z-zF-GVc"/>
+                <constraint firstItem="auA-mj-JiH" firstAttribute="centerX" secondItem="D6v-jb-HFk" secondAttribute="centerX" id="McG-Gq-c8K"/>
+                <constraint firstItem="D6v-jb-HFk" firstAttribute="width" secondItem="RA9-vm-uID" secondAttribute="width" multiplier="190:320" id="dJO-7l-ueG"/>
+                <constraint firstItem="pwL-3w-odY" firstAttribute="centerX" secondItem="auA-mj-JiH" secondAttribute="centerX" id="i3i-hS-Ub9"/>
+                <constraint firstItem="auA-mj-JiH" firstAttribute="width" secondItem="RA9-vm-uID" secondAttribute="width" multiplier="256:320" id="mt3-2e-xHw"/>
+                <constraint firstItem="auA-mj-JiH" firstAttribute="top" secondItem="D6v-jb-HFk" secondAttribute="bottom" constant="22" id="paM-Dm-iCb"/>
+                <constraint firstItem="D6v-jb-HFk" firstAttribute="width" secondItem="D6v-jb-HFk" secondAttribute="height" multiplier="19:15" id="rMs-OJ-9fU"/>
+                <constraint firstItem="pwL-3w-odY" firstAttribute="top" secondItem="auA-mj-JiH" secondAttribute="bottom" constant="50" id="ujA-TM-QLh"/>
+                <constraint firstItem="D6v-jb-HFk" firstAttribute="centerX" secondItem="RA9-vm-uID" secondAttribute="centerX" id="vhf-R7-OXH"/>
+            </constraints>
+            <connections>
+                <outlet property="emptyImageView" destination="D6v-jb-HFk" id="6SL-uD-gqh"/>
+                <outlet property="emptyLbl" destination="auA-mj-JiH" id="HmP-ti-Mvs"/>
+                <outlet property="reloadBtn" destination="pwL-3w-odY" id="mlN-F8-bkK"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="-367"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="无网络空态" width="190" height="150"/>
+    </resources>
+</document>

@@ -24,7 +24,7 @@ alpha:alphaValue]
 + (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        swizzling_exchangeMethod([UIViewController class] ,@selector(viewDidLoad),    @selector(swizzling_viewDidLoad));
+        swizzling_exchangeMethod([UIViewController class], @selector(viewDidLoad), @selector(swizzling_viewDidLoad));
     });
 }
 

@@ -8,7 +8,7 @@
 
 #import "LimitTextView.h"
 #import "UITextView+LineSpace.h"
-#import "UtilMacros.h"
+#import "CommonThemeMacro.h"
 
 @implementation LimitTextView
 
@@ -32,8 +32,8 @@
     self.delegate = self;
     _limitLength = 100;
     _placeHolderText = @"";
-    _placeHolderTextColor = UIColorFromRGB(0xACACAC);
-    _inputTextColor = UIColorFromRGB(0x505050);
+    _placeHolderTextColor = kUIColorFromRGB(0xACACAC);
+    _inputTextColor = kUIColorFromRGB(0x505050);
 }
 
 #pragma mark - Public Method

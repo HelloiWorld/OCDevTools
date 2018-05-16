@@ -44,24 +44,20 @@
     self.tabBarController.tabBar.frame = frame;
 }
 
-#pragma roate method
-- (BOOL)shouldAutorotate
-{
-    return _shouldRotate;
+#pragma mark - roate method 需要页面支持其他方向，需要重写这三个方法，默认所有页面只支持竖屏
+//是否自动旋转
+- (BOOL)shouldAutorotate{
+    return self.topViewController.shouldAutorotate;
 }
 
+//支持哪些屏幕方向
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return _shouldRotate ? UIInterfaceOrientationMaskAllButUpsideDown : UIInterfaceOrientationMaskPortrait;
+    return [self.topViewController supportedInterfaceOrientations];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if (_shouldRotate) {
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-                interfaceOrientation == UIInterfaceOrientationLandscapeRight ||
-                interfaceOrientation == UIInterfaceOrientationPortrait);
-    }
-    return UIInterfaceOrientationPortrait == interfaceOrientation;
+//默认方向
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
 @end
