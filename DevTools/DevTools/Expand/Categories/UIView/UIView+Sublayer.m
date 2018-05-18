@@ -10,6 +10,25 @@
 
 @implementation UIView (Sublayer)
 
+- (void)drawDashLineWithLineLength:(CGFloat)lineLength lineSpacing:(CGFloat)lineSpacing strokeColor:(UIColor*)strokeColor{
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.bounds = self.bounds;//虚线的大小
+    shapeLayer.position = CGPointMake(CGRectGetMidX(self.bounds),CGRectGetMidY(self.bounds));//虚线框锚点
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;//填充色
+    shapeLayer.strokeColor = strokeColor.CGColor;//画笔颜色
+    shapeLayer.lineWidth = CGRectGetHeight(self.bounds);//虚线宽度
+    //  设置线宽，线间距
+    shapeLayer.lineDashPattern = @[@(lineLength), @(lineSpacing)];
+    //  设置路径
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, 0, 0);
+    CGPathAddLineToPoint(path, NULL,CGRectGetWidth(self.bounds), 0);
+    [shapeLayer setPath:path];
+    CGPathRelease(path);
+    //  把绘制好的虚线添加上来
+    [self.layer addSublayer:shapeLayer];
+}
+
 - (void)drawDashLayerWithLineWidth:(CGFloat)lineWidth lineLength:(CGFloat)lineLength lineSpacing:(CGFloat)lineSpacing strokeColor:(UIColor*)strokeColor cornerRadius:(CGFloat)radius{
 //    [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)]; // 一句话清除所有子图层，不足是也会将subView也一并清除掉
     // 如果view的大小尚未确定，需先强制刷新

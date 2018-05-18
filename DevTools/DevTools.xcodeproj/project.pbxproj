@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BA34D988BCB130B4F053A34 /* libPods-DevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F36FB38989AD82AD96BCE6 /* libPods-DevTools.a */; };
+		3D2C720B20AEB1B000CD19AD /* UIView+Sublayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C720A20AEB1B000CD19AD /* UIView+Sublayer.m */; };
 		3D7D51152057D7F7007F61D2 /* BaseJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D51012057D7F7007F61D2 /* BaseJsonModel.m */; };
 		3D7D51162057D7F7007F61D2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D51042057D7F7007F61D2 /* BaseNavigationController.m */; };
 		3D7D511C2057D932007F61D2 /* LimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D511B2057D932007F61D2 /* LimitTextField.m */; };
@@ -60,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		0AAEBDA7AE8D82047BC5E289 /* Pods-DevTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTools/Pods-DevTools.debug.xcconfig"; sourceTree = "<group>"; };
+		3D2C720920AEB1B000CD19AD /* UIView+Sublayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sublayer.h"; sourceTree = "<group>"; };
+		3D2C720A20AEB1B000CD19AD /* UIView+Sublayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sublayer.m"; sourceTree = "<group>"; };
 		3D7D50D12057D7F7007F61D2 /* UtilMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilMacros.h; sourceTree = "<group>"; };
 		3D7D50D22057D7F7007F61D2 /* UIDeviceMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceMacros.h; sourceTree = "<group>"; };
 		3D7D51002057D7F7007F61D2 /* BaseJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseJsonModel.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				3D86CB7820AC214C001D9A46 /* UIView+Animation.m */,
 				3D7D517F2057DAC3007F61D2 /* UIView+Responder.h */,
 				3D7D51812057DAC3007F61D2 /* UIView+Responder.m */,
+				3D2C720920AEB1B000CD19AD /* UIView+Sublayer.h */,
+				3D2C720A20AEB1B000CD19AD /* UIView+Sublayer.m */,
 				3D7D51802057DAC3007F61D2 /* UIViewAdditions.h */,
 				3D7D51822057DAC3007F61D2 /* UIViewAdditions.m */,
 			);
@@ -739,6 +744,7 @@
 				3D86CB8720AC2260001D9A46 /* AlignLeftAlertController.m in Sources */,
 				3D86CB7620AC208C001D9A46 /* ZKWebViewController.m in Sources */,
 				3D7D51852057DAC3007F61D2 /* UIViewController+BackButtonHandler.m in Sources */,
+				3D2C720B20AEB1B000CD19AD /* UIView+Sublayer.m in Sources */,
 				3D7D518D2057DAC3007F61D2 /* UIScrollView+Direction.m in Sources */,
 				3D7D51862057DAC3007F61D2 /* UILayoutFittingView.m in Sources */,
 				3D86CB3B20AC1149001D9A46 /* NSArray+Search.m in Sources */,

@@ -11,6 +11,17 @@
 @interface UIView (Sublayer)
 
 /**
+ 绘制一条虚线
+ 
+ @param lineLength 虚线的宽度
+ @param lineSpacing 虚线的间距
+ @param strokeColor 虚线的颜色
+ */
+- (void)drawDashLineWithLineLength:(CGFloat)lineLength
+                       lineSpacing:(CGFloat)lineSpacing
+                       strokeColor:(UIColor*)strokeColor;
+
+/**
  添加虚线边框图层
 
  @param lineWidth 虚线宽度
