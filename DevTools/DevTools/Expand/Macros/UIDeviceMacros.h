@@ -33,6 +33,7 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kScreenScale  [UIScreen mainScreen].bounds.size.width/320.0
 #define kScreenHeightScale [UIScreen mainScreen].bounds.size.height/568.0
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 
 //iPhone 固定高度
 #define TOP_BAR_HEIGHT (kDevice_Is_iPhoneX ? 88 : 64)

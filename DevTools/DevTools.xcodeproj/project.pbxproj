@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2BA34D988BCB130B4F053A34 /* libPods-DevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F36FB38989AD82AD96BCE6 /* libPods-DevTools.a */; };
 		3D2C720B20AEB1B000CD19AD /* UIView+Sublayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2C720A20AEB1B000CD19AD /* UIView+Sublayer.m */; };
+		3D64171220D0B32200F77E73 /* districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D64171020D0B32200F77E73 /* districts.json */; };
+		3D64171320D0B32200F77E73 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D64171120D0B32200F77E73 /* cities.json */; };
+		3D64171820D0B39F00F77E73 /* ZTCCityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D64171620D0B39F00F77E73 /* ZTCCityParser.m */; };
 		3D7D51152057D7F7007F61D2 /* BaseJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D51012057D7F7007F61D2 /* BaseJsonModel.m */; };
 		3D7D51162057D7F7007F61D2 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D51042057D7F7007F61D2 /* BaseNavigationController.m */; };
 		3D7D511C2057D932007F61D2 /* LimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D511B2057D932007F61D2 /* LimitTextField.m */; };
@@ -63,6 +66,10 @@
 		0AAEBDA7AE8D82047BC5E289 /* Pods-DevTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTools/Pods-DevTools.debug.xcconfig"; sourceTree = "<group>"; };
 		3D2C720920AEB1B000CD19AD /* UIView+Sublayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sublayer.h"; sourceTree = "<group>"; };
 		3D2C720A20AEB1B000CD19AD /* UIView+Sublayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sublayer.m"; sourceTree = "<group>"; };
+		3D64171020D0B32200F77E73 /* districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = districts.json; sourceTree = "<group>"; };
+		3D64171120D0B32200F77E73 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		3D64171620D0B39F00F77E73 /* ZTCCityParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCCityParser.m; sourceTree = "<group>"; };
+		3D64171720D0B39F00F77E73 /* ZTCCityParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCCityParser.h; sourceTree = "<group>"; };
 		3D7D50D12057D7F7007F61D2 /* UtilMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilMacros.h; sourceTree = "<group>"; };
 		3D7D50D22057D7F7007F61D2 /* UIDeviceMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceMacros.h; sourceTree = "<group>"; };
 		3D7D51002057D7F7007F61D2 /* BaseJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseJsonModel.h; sourceTree = "<group>"; };
@@ -183,6 +190,38 @@
 				E3F36FB38989AD82AD96BCE6 /* libPods-DevTools.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D64170F20D0B32200F77E73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D64171020D0B32200F77E73 /* districts.json */,
+				3D64171120D0B32200F77E73 /* cities.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D64171420D0B33D00F77E73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D912DE82051224D00B272BB /* AppDelegate.h */,
+				3D912DE92051224D00B272BB /* AppDelegate.m */,
+				3D912DEE2051224D00B272BB /* Main.storyboard */,
+				3D912DF12051224D00B272BB /* Assets.xcassets */,
+				3D912DF32051224D00B272BB /* LaunchScreen.storyboard */,
+				3D912DF62051224D00B272BB /* Info.plist */,
+				3D912DF72051224D00B272BB /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D64171520D0B39F00F77E73 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3D64171720D0B39F00F77E73 /* ZTCCityParser.h */,
+				3D64171620D0B39F00F77E73 /* ZTCCityParser.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		3D658181232802C9B8DA3A06 /* Pods */ = {
@@ -483,6 +522,7 @@
 			children = (
 				3D86CB5720AC1C77001D9A46 /* AppManager */,
 				3D86CB8820AC2312001D9A46 /* EventCalendar */,
+				3D64171520D0B39F00F77E73 /* Location */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -599,17 +639,12 @@
 			isa = PBXGroup;
 			children = (
 				3D7D50CF2057D7F7007F61D2 /* Expand */,
-				3D912DE82051224D00B272BB /* AppDelegate.h */,
-				3D912DE92051224D00B272BB /* AppDelegate.m */,
 				3D867A122064E88500AB9C6C /* TestListVC.h */,
 				3D867A132064E88500AB9C6C /* TestListVC.m */,
 				3D7D519B2057DE24007F61D2 /* TestTextInputVC.h */,
 				3D7D519C2057DE24007F61D2 /* TestTextInputVC.m */,
-				3D912DEE2051224D00B272BB /* Main.storyboard */,
-				3D912DF12051224D00B272BB /* Assets.xcassets */,
-				3D912DF32051224D00B272BB /* LaunchScreen.storyboard */,
-				3D912DF62051224D00B272BB /* Info.plist */,
-				3D912DF72051224D00B272BB /* main.m */,
+				3D64170F20D0B32200F77E73 /* Resources */,
+				3D64171420D0B33D00F77E73 /* Supporting Files */,
 			);
 			path = DevTools;
 			sourceTree = "<group>";
@@ -677,7 +712,9 @@
 			files = (
 				3D86CB5F20AC1FD7001D9A46 /* 2a16117aaf726e3d6208cf40001c8524.gif in Resources */,
 				3D912DF52051224D00B272BB /* LaunchScreen.storyboard in Resources */,
+				3D64171220D0B32200F77E73 /* districts.json in Resources */,
 				3D912DF22051224D00B272BB /* Assets.xcassets in Resources */,
+				3D64171320D0B32200F77E73 /* cities.json in Resources */,
 				3D86CB7320AC205A001D9A46 /* nativehelper.js in Resources */,
 				3D86CB4920AC147B001D9A46 /* EmptyStatusView.xib in Resources */,
 				3D912DF02051224D00B272BB /* Main.storyboard in Resources */,
@@ -764,6 +801,7 @@
 				3D86CB4220AC136C001D9A46 /* BlankViewController.m in Sources */,
 				3D86CB3F20AC132D001D9A46 /* BaseViewController.m in Sources */,
 				3D7D519D2057DE24007F61D2 /* TestTextInputVC.m in Sources */,
+				3D64171820D0B39F00F77E73 /* ZTCCityParser.m in Sources */,
 				3D7D51872057DAC3007F61D2 /* NSData+Base64.m in Sources */,
 				3D86CB5A20AC1CA9001D9A46 /* ZKAppManager.m in Sources */,
 				3D7D51162057D7F7007F61D2 /* BaseNavigationController.m in Sources */,
@@ -917,7 +955,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DevTools/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DevTools/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pzk.ios.DevTools;
@@ -932,7 +970,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DevTools/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DevTools/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pzk.ios.DevTools;
