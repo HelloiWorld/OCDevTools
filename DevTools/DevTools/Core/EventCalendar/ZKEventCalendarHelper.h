@@ -1,5 +1,5 @@
 //
-//  EventCalendarHelper.h
+//  ZKEventCalendarHelper.h
 //  职通车
 //
 //  Created by PengZK on 2017/12/28.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EventCalendarHelper : NSObject
+@interface ZKEventCalendarHelper : NSObject
 
 + (instancetype)sharedEventCalendar;
 

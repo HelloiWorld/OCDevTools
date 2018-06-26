@@ -1,22 +1,22 @@
 //
-//  EventCalendarHelper.m
+//  ZKEventCalendarHelper.m
 //  职通车
 //
 //  Created by PengZK on 2017/12/28.
 //  Copyright © 2017年 ZTC. All rights reserved.
 //
 
-#import "EventCalendarHelper.h"
+#import "ZKEventCalendarHelper.h"
 #import <EventKit/EventKit.h>
 #import <UIKit/UIKit.h>
 
-@implementation EventCalendarHelper
+@implementation ZKEventCalendarHelper
 
-static EventCalendarHelper *calendar;
+static ZKEventCalendarHelper *calendar;
 + (instancetype)sharedEventCalendar{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        calendar = [[EventCalendarHelper alloc] init];
+        calendar = [[ZKEventCalendarHelper alloc] init];
     });
     
     return calendar;
